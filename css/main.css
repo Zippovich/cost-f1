@@ -1,0 +1,15 @@
+body { font-family: Arial; font-size: 10pt; }
+
+#content { margin: 20px}
+
+.tbl { border-collapse: collapse; }
+.tbl td, th { padding: 4px; border: 1px solid #cccccc; }
+.tbl th { background-color: #e4e4e4; border: 1px solid #cccccc; }
+
+.form { border-collapse: collapse; }
+.form td, th { padding: 4px; border: 0; }
+.form th { text-align: right; }
+.collapse img {display:block;}
+.collapse-img,
+.active .expand-img{display:none !important;}
+.active .collapse-img {display:block !important;}
