@@ -1,606 +1,638 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
-<head>
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
-	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-	<title>test</title>
-</head>
-<body>
-	<img src="images/header.jpg">
-	<div id="content">
-		<h1>New Quote</h1>
-		<img src="images/schema.png" style="float:right; margin-left:10px">
-		<table>
-			<tr>
-				<td style="vertical-align:top">
-					<table class="form">
-						<tr>
-							<th><label>Client</label></th>
-							<td colspan="5"><select name="client">
-								<option>Select client</option>
-								<option>Factory One</option>
-							</select></td>
-						</tr>
-						<tr>
-							<th><label>Company</label></th>
-							<td colspan="5"><input type="text" name="company" style="width:350px"></td>
-						</tr>
-						<tr>
-							<th><label>Address</label></th>
-							<td colspan="5"><input type="text" name="address_1" style="width:350px"></td>
-						</tr>
-						<tr>
-							<th></th>
-							<td colspan="5"><input type="text" name="address_2" style="width:350px"></td>
-						</tr>
-						<tr>
-							<th>Suburb</th>
-							<td><input type="text" name="suburb" style="width:100px"></td>
-							<th>State</th>
-							<td><select name="state">
-								<option></option>
-								<option>ACT</option>
-								<option>JBT</option>
-								<option>NSW</option>
-								<option>NT</option>
-								<option>QLD</option>
-								<option>SA</option>
-								<option>TAS</option>
-								<option>VIC</option>
-								<option>WA</option>
-								</select></td>
-							<th>Post Code</th>
-							<td><input type="text" name="post_code" style="width:50px"></td>
-						</tr>
-					</table>
-				</td>
-				<td style="width:30px">&nbsp;</td>
-				<td>
-					<table class="form">
-						<tr>
-							<th></th>
-							<td>&nbsp;</td>
-						</tr>
-						<tr>
-							<th><label>Phone</label></th>
-							<td><input type="text" name="phone" style="width:350px"></td>
-						</tr>
-						<tr>
-							<th><label>Fax</label></th>
-							<td><input type="text" name="fax" style="width:350px"></td>
-						</tr>
-						<tr>
-							<th><label>Contact</label></th>
-							<td><input type="text" name="contact" style="width:350px"></td>
-						</tr>
-						<tr>
-							<th><label>Email</label></th>
-							<td><input type="text" name="email" style="width:350px"></td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-		<br>
-		<table class="form">
-			<tr>
-				<th style="vertical-align:top"><label>Description</label></th>
-				<td>
-					<table style="border:1px solid #dedede; margin-bottom:5px">
-						<tr>
-							<td style="padding:10px"><strong>Channel 9</strong><br>
-								<strong>Posters 200gsm</strong><br>
-								Quantity 10, 1m wide x 1m high<br>
-								1x kind of artwork, 10 per kind</td>
-							<td style="padding:10px">8 colour, single sided<br>
-								No laminate, single sided<br>
-								Trimmed size,<br>
-								Printed proof</td>
-							<td style="padding:10px">Rolled on core<br>
-								Pickup<br>
-								24 hour Turnaround<br>
-								Standard colour matching</td>
-						</tr>
-					</table>
-				</td>
-			</tr>
-		</table>
-		<br>
-		<p style="float:right"><strong>Design</strong> | <a href="">Digital</a> | <a href="">Offset</a> | <a href="">Large format</a></p>
-		<p><input type="button" value="Add Product" class="link-add-product"> <input type="button" value="Add Product from Templates"> <input type="button" value="View Templates List"></p>
-		<table id="items">
-			<tr>
-				<th></th>
-				<th>Regarding</th>
-				<th>Product/Item</th>
-				<th>Quantity</th>
-				<th>Width</th>
-				<th>Height</th>
-				<th>Art kind</th>
-				<th>Qty kind</th>
-				<th>Join</th>
-				<th>Pieces</th>
-				<th>P/PER</th>
-				<th>T/PER</th>
-				<th>T/SQM</th>
-				<th>P/SQM</th>
-				<th>T/LM</th>
-				<th>P/LM</th>
-				<th>Hidden</th>
-				<th></th>
-				<th></th>
-			</tr>
-			<tr>
-				<td><a href="#" class="collapse"><img src="images/collapse.gif" class="collapse-img"><img src="images/expand.gif" class="expand-img"></a></td>
-				<td><input type="text" name="regarding" style="width:200px"></td>
-				<td><input type="text" name="product_item" style="width:200px"></td>
-				<td><input type="text" name="quantity" style="width:60px"></td>
-				<td><input type="text" name="width" style="width:60px"></td>
-				<td><input type="text" name="height" style="width:60px"></td>
-				<td><input type="text" name="art_kind" style="width:60px"></td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">N/A</td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">4</td>
-				<td style="text-align:center">40</td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">1</td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">1</td>
-				<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-				<td><a href=""><img src="images/i-down.png"></a></td>
-				<td><a href=""><img src="images/i-cross.png"></a></td>
-			</tr>
-			<tr style="display:none">
-				<td colspan="19" style="padding:10px">
-					<table class="tbl">
-						<tr>
-							<th>Category</th>
-							<th>Cost Matrix</th>
-							<th>Stock W</th>
-							<th>Stock H</th>
-							<th>C/Form</th>
-							<th>Time</th>
-							<th>U/Cost</th>
-							<th>T/Cost</th>
-							<th>Markup</th>
-							<th>TOT/Form</th>
-							<th>TOT/EX</th>
-							<th>TOT/INC</th>
-							<th>Profit</th>
-							<th>Hidden</th>
-							<th></th>
-							<th></th>
-						</tr>
-						<tr>
-							<td><select name="item_cost_matrix">
-									<option>Please category</option>
-									<option>Banner</option>
-									<option>Printer</option>
-								</select></td>
-							<td><select name="item_cost_matrix">
-									<option>Please select</option>
-									<option>LF Setup</option>
-									<option>Printer Setup</option>
-									<option>450 Banner Media</option>
-								</select></td>
-							<td></td>
-							<td></td>
-							<td>SQM</td>
-							<td></td>
-							<td>5.00</td>
-							<td>50.00</td>
-							<td>100%</td>
-							<td>SQM</td>
-							<td>40.00</td>
-							<td>44.00</td>
-							<td>00.00</td>
-							<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-							<td><a href=""><img src="images/i-down.png"></a></td>
-							<td><a href=""><img src="images/i-cross.png"></a></td>
-						</tr>
-						<tr>
-							<td><select name="item_cost_matrix">
-									<option>Please category</option>
-									<option>Banner</option>
-									<option>Printer</option>
-								</select></td>
-							<td><select name="item_cost_matrix">
-									<option>Please select</option>
-									<option>LF Setup</option>
-									<option>Printer Setup</option>
-									<option>450 Banner Media</option>
-								</select></td>
-							<td></td>
-							<td></td>
-							<td>SQM</td>
-							<td></td>
-							<td>5.00</td>
-							<td>50.00</td>
-							<td>100%</td>
-							<td>SQM</td>
-							<td>40.00</td>
-							<td>44.00</td>
-							<td>00.00</td>
-							<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-							<td><a href=""><img src="images/i-down.png"></a></td>
-							<td><a href=""><img src="images/i-cross.png"></a></td>
-						</tr>
-						<tr>
-							<td><select name="item_cost_matrix">
-									<option>Please category</option>
-									<option>Banner</option>
-									<option>Printer</option>
-								</select></td>
-							<td><select name="item_cost_matrix">
-									<option>Please select</option>
-									<option>LF Setup</option>
-									<option>Printer Setup</option>
-									<option>450 Banner Media</option>
-								</select></td>
-							<td></td>
-							<td></td>
-							<td>SQM</td>
-							<td></td>
-							<td>5.00</td>
-							<td>50.00</td>
-							<td>100%</td>
-							<td>SQM</td>
-							<td>40.00</td>
-							<td>44.00</td>
-							<td>00.00</td>
-							<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-							<td><a href=""><img src="images/i-down.png"></a></td>
-							<td><a href=""><img src="images/i-cross.png"></a></td>
-						</tr>
-						<tr style="background-color:#e4e4e4">
-							<td colspan="5" style="text-align:right">TOTALS</td>
-							<td style="text-align:center"><strong>1.00</strong><br>Time</td>
-							<td style="text-align:center"><strong>14.00</strong><br>U/Cost</td>
-							<td style="text-align:center"><strong>140.00</strong><br>T/Cost</td>
-							<td style="text-align:center"><strong>100%</strong><br>Markup</td>
-							<td style="text-align:center"><strong>28.00</strong><br>TOT/Unit</td>
-							<td style="text-align:center"><strong>280.00</strong><br>TOT/EX</td>
-							<td style="text-align:center"><strong>308.00</strong><br>TOT/INC</td>
-							<td style="text-align:center"><strong>140.00</strong><br>Profit</td>
-							<td colspan="3" style="text-align:center"><strong>50%</strong><br>GP</td>
-						</tr>
-					</table>
-					<p><input type="button" value="Add Item" class="link-add-item"> <input type="button" value="Save as Template"></p>
-				</td>
-			</tr>
-			<tr>
-				<td><a href="#" class="collapse"><img src="images/collapse.gif" class="collapse-img"><img src="images/expand.gif" class="expand-img"></a></td>
-				<td><input type="text" name="regarding" style="width:200px"></td>
-				<td><input type="text" name="product_item" style="width:200px"></td>
-				<td><input type="text" name="quantity" style="width:60px"></td>
-				<td><input type="text" name="width" style="width:60px"></td>
-				<td><input type="text" name="height" style="width:60px"></td>
-				<td><input type="text" name="art_kind" style="width:60px"></td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">N/A</td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">4</td>
-				<td style="text-align:center">40</td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">1</td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">1</td>
-				<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-				<td><a href=""><img src="images/i-down.png"></a></td>
-				<td><a href=""><img src="images/i-cross.png"></a></td>
-			</tr>
-			<tr style="display:none">
-				<td colspan="19" style="padding:10px">
-					<table class="tbl">
-						<tr>
-							<th>Category</th>
-							<th>Cost Matrix</th>
-							<th>Stock W</th>
-							<th>Stock H</th>
-							<th>C/Form</th>
-							<th>Time</th>
-							<th>U/Cost</th>
-							<th>T/Cost</th>
-							<th>Markup</th>
-							<th>TOT/Form</th>
-							<th>TOT/EX</th>
-							<th>TOT/INC</th>
-							<th>Profit</th>
-							<th>Hidden</th>
-							<th></th>
-							<th></th>
-						</tr>
-						<tr>
-							<td><select name="item_cost_matrix">
-									<option>Please category</option>
-									<option>Banner</option>
-									<option>Printer</option>
-								</select></td>
-							<td><select name="item_cost_matrix">
-									<option>Please select</option>
-									<option>LF Setup</option>
-									<option>Printer Setup</option>
-									<option>450 Banner Media</option>
-								</select></td>
-							<td></td>
-							<td></td>
-							<td>SQM</td>
-							<td></td>
-							<td>5.00</td>
-							<td>50.00</td>
-							<td>100%</td>
-							<td>SQM</td>
-							<td>40.00</td>
-							<td>44.00</td>
-							<td>00.00</td>
-							<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-							<td><a href=""><img src="images/i-down.png"></a></td>
-							<td><a href=""><img src="images/i-cross.png"></a></td>
-						</tr>
-						<tr>
-							<td><select name="item_cost_matrix">
-									<option>Please category</option>
-									<option>Banner</option>
-									<option>Printer</option>
-								</select></td>
-							<td><select name="item_cost_matrix">
-									<option>Please select</option>
-									<option>LF Setup</option>
-									<option>Printer Setup</option>
-									<option>450 Banner Media</option>
-								</select></td>
-							<td></td>
-							<td></td>
-							<td>SQM</td>
-							<td></td>
-							<td>5.00</td>
-							<td>50.00</td>
-							<td>100%</td>
-							<td>SQM</td>
-							<td>40.00</td>
-							<td>44.00</td>
-							<td>00.00</td>
-							<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-							<td><a href=""><img src="images/i-down.png"></a></td>
-							<td><a href=""><img src="images/i-cross.png"></a></td>
-						</tr>
-						<tr>
-							<td><select name="item_cost_matrix">
-									<option>Please category</option>
-									<option>Banner</option>
-									<option>Printer</option>
-								</select></td>
-							<td><select name="item_cost_matrix">
-									<option>Please select</option>
-									<option>LF Setup</option>
-									<option>Printer Setup</option>
-									<option>450 Banner Media</option>
-								</select></td>
-							<td></td>
-							<td></td>
-							<td>SQM</td>
-							<td></td>
-							<td>5.00</td>
-							<td>50.00</td>
-							<td>100%</td>
-							<td>SQM</td>
-							<td>40.00</td>
-							<td>44.00</td>
-							<td>00.00</td>
-							<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-							<td><a href=""><img src="images/i-down.png"></a></td>
-							<td><a href=""><img src="images/i-cross.png"></a></td>
-						</tr>
-						<tr style="background-color:#e4e4e4">
-							<td colspan="5" style="text-align:right">TOTALS</td>
-							<td style="text-align:center"><strong>1.00</strong><br>Time</td>
-							<td style="text-align:center"><strong>14.00</strong><br>U/Cost</td>
-							<td style="text-align:center"><strong>140.00</strong><br>T/Cost</td>
-							<td style="text-align:center"><strong>100%</strong><br>Markup</td>
-							<td style="text-align:center"><strong>28.00</strong><br>TOT/Unit</td>
-							<td style="text-align:center"><strong>280.00</strong><br>TOT/EX</td>
-							<td style="text-align:center"><strong>308.00</strong><br>TOT/INC</td>
-							<td style="text-align:center"><strong>140.00</strong><br>Profit</td>
-							<td colspan="3" style="text-align:center"><strong>50%</strong><br>GP</td>
-						</tr>
-					</table>
-					<p><input type="button" value="Add Item" class="link-add-item"> <input type="button" value="Save as Template"></p>
-				</td>
-			</tr>
-			<tr>
-				<td><a href="#" class="collapse"><img src="images/collapse.gif" class="collapse-img"><img src="images/expand.gif" class="expand-img"></a></td>
-				<td><input type="text" name="regarding" style="width:200px"></td>
-				<td><input type="text" name="product_item" style="width:200px"></td>
-				<td><input type="text" name="quantity" style="width:60px"></td>
-				<td><input type="text" name="width" style="width:60px"></td>
-				<td><input type="text" name="height" style="width:60px"></td>
-				<td><input type="text" name="art_kind" style="width:60px"></td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">N/A</td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">4</td>
-				<td style="text-align:center">40</td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">1</td>
-				<td style="text-align:center">10</td>
-				<td style="text-align:center">1</td>
-				<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-				<td><a href=""><img src="images/i-down.png"></a></td>
-				<td><a href=""><img src="images/i-cross.png"></a></td>
-			</tr>
-			<tr style="display:none">
-				<td colspan="19" style="padding:10px">
-					<table class="tbl">
-						<tr>
-							<th>Category</th>
-							<th>Cost Matrix</th>
-							<th>Stock W</th>
-							<th>Stock H</th>
-							<th>C/Form</th>
-							<th>Time</th>
-							<th>U/Cost</th>
-							<th>T/Cost</th>
-							<th>Markup</th>
-							<th>TOT/Form</th>
-							<th>TOT/EX</th>
-							<th>TOT/INC</th>
-							<th>Profit</th>
-							<th>Hidden</th>
-							<th></th>
-							<th></th>
-						</tr>
-						<tr>
-							<td><select name="item_cost_matrix">
-									<option>Please category</option>
-									<option>Banner</option>
-									<option>Printer</option>
-								</select></td>
-							<td><select name="item_cost_matrix">
-									<option>Please select</option>
-									<option>LF Setup</option>
-									<option>Printer Setup</option>
-									<option>450 Banner Media</option>
-								</select></td>
-							<td></td>
-							<td></td>
-							<td>SQM</td>
-							<td></td>
-							<td>5.00</td>
-							<td>50.00</td>
-							<td>100%</td>
-							<td>SQM</td>
-							<td>40.00</td>
-							<td>44.00</td>
-							<td>00.00</td>
-							<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-							<td><a href=""><img src="images/i-down.png"></a></td>
-							<td><a href=""><img src="images/i-cross.png"></a></td>
-						</tr>
-						<tr>
-							<td><select name="item_cost_matrix">
-									<option>Please category</option>
-									<option>Banner</option>
-									<option>Printer</option>
-								</select></td>
-							<td><select name="item_cost_matrix">
-									<option>Please select</option>
-									<option>LF Setup</option>
-									<option>Printer Setup</option>
-									<option>450 Banner Media</option>
-								</select></td>
-							<td></td>
-							<td></td>
-							<td>SQM</td>
-							<td></td>
-							<td>5.00</td>
-							<td>50.00</td>
-							<td>100%</td>
-							<td>SQM</td>
-							<td>40.00</td>
-							<td>44.00</td>
-							<td>00.00</td>
-							<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-							<td><a href=""><img src="images/i-down.png"></a></td>
-							<td><a href=""><img src="images/i-cross.png"></a></td>
-						</tr>
-						<tr>
-							<td><select name="item_cost_matrix">
-									<option>Please category</option>
-									<option>Banner</option>
-									<option>Printer</option>
-								</select></td>
-							<td><select name="item_cost_matrix">
-									<option>Please select</option>
-									<option>LF Setup</option>
-									<option>Printer Setup</option>
-									<option>450 Banner Media</option>
-								</select></td>
-							<td></td>
-							<td></td>
-							<td>SQM</td>
-							<td></td>
-							<td>5.00</td>
-							<td>50.00</td>
-							<td>100%</td>
-							<td>SQM</td>
-							<td>40.00</td>
-							<td>44.00</td>
-							<td>00.00</td>
-							<td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
-							<td><a href=""><img src="images/i-down.png"></a></td>
-							<td><a href=""><img src="images/i-cross.png"></a></td>
-						</tr>
-						<tr style="background-color:#e4e4e4">
-							<td colspan="5" style="text-align:right">TOTALS</td>
-							<td style="text-align:center"><strong>1.00</strong><br>Time</td>
-							<td style="text-align:center"><strong>14.00</strong><br>U/Cost</td>
-							<td style="text-align:center"><strong>140.00</strong><br>T/Cost</td>
-							<td style="text-align:center"><strong>100%</strong><br>Markup</td>
-							<td style="text-align:center"><strong>28.00</strong><br>TOT/Unit</td>
-							<td style="text-align:center"><strong>280.00</strong><br>TOT/EX</td>
-							<td style="text-align:center"><strong>308.00</strong><br>TOT/INC</td>
-							<td style="text-align:center"><strong>140.00</strong><br>Profit</td>
-							<td colspan="3" style="text-align:center"><strong>50%</strong><br>GP</td>
-						</tr>
-					</table>
-					<p><input type="button" value="Add Item" class="link-add-item"> <input type="button" value="Save as Template"></p>
-				</td>
-			</tr>
-			<tr style="background-color:#e4e4e4">
-				<td colspan="3" style="text-align:right">TOTALS</td>
-				<td style="text-align:center"><strong>10</strong><br>Qty</td>
-				<td style="text-align:center"><strong>1</strong><br>Width</td>
-				<td style="text-align:center"><strong>1</strong><br>Height</td>
-				<td style="text-align:center"><strong>1</strong><br>Art Kind</td>
-				<td style="text-align:center"><strong>30</strong><br>Qty kind</td>
-				<td style="text-align:center"><strong>N/A</strong><br>Join</td>
-				<td style="text-align:center"><strong>30</strong><br>Pieces</td>
-				<td style="text-align:center"><strong>12</strong><br>P/PER</td>
-				<td style="text-align:center"><strong>120</strong><br>T/PER</td>
-				<td style="text-align:center"><strong>30</strong><br>T/SQM</td>
-				<td style="text-align:center"><strong>3</strong><br>P/SQM</td>
-				<td style="text-align:center"><strong>30</strong><br>T/LM</td>
-				<td style="text-align:center"><strong>3</strong><br>P/LM</td>
-			</tr>
-		</table>
-		<p>Notes:</p>
-		<ol>
-			<li>When client is selected from combobox other details for selected client like address, contact, email etc. will be pre-filled.</li>
-			<li>For each product there will be a few cost items. Expend/collapse icons will be clickable and will expand or collapse cost items list.</li>
-			<li>If "Hidden" is checked this product or cost item won't be visible for client. Only for staff members.</li>
-			<li>With down/up arrows it should be possible to change order of products or cost items.</li>
-			<li>Item in cost item list will have combobox with list of items from cost matrix.</li>
-			<li>Save as Template should allow to save named templates from selected cost items to use for other products.</li>
-			<li>You will notice that on the right side of the top box there are tabs; Design, digital, offset &amp; large format. This is because each main product we sell has different calculations. for example click, sections, leafs ect ect.</li>
-		</ol>
-	</div>
-	<script type="text/javascript">
-		$(function() {
-			$('.link-add-product').click(function() {
-				var mtbl = $('#items');
-				var mtr = mtbl.find('>tbody>tr').eq(-3);
-				var mtrHidden = mtbl.find('>tbody>tr').eq(-2);
-				mtr.after(mtrHidden.clone(), mtr.clone());
-			});
-			$('.link-add-item').live("click", function(){
-				var tbl = $(this).parent().parent().find('.tbl');
-				var tr = tbl.find('tr').eq(-2);
-				tr.after(tr.clone());
-			});
-			$('.collapse').live("click", function(){
-				var costItems = $(this).parent().parent().next();
-				if (costItems.is(':visible')) {
-					costItems.hide();
-					$(this).removeClass('active');
-				} else {
-					costItems.show();
-					$(this).addClass('active');
-				}
-				return false;
-			});
-		});
-	</script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="css/smoothness/jquery-ui-1.8.22.custom.css" />
+        <link rel="stylesheet" type="text/css" media="all" href="css/dragtable-default.css" />
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="js/jquery-ui-1.8.22.custom.min.js"></script>
+        <script type="text/javascript" src="js/jquery.dragtable.js"></script>
+        <title>test</title>
+    </head>
+    <body>
+        <img src="images/header.jpg">
+        <div id="content">
+            <h1>New Quote</h1>
+            <img src="images/schema.png" style="float:right; margin-left:10px">
+            <table>
+                <tr>
+                    <td style="vertical-align:top">
+                        <table class="form">
+                            <tr>
+                                <th><label>Client</label></th>
+                                <td colspan="5"><select name="client">
+                                        <option>Select client</option>
+                                        <option>Factory One</option>
+                                    </select></td>
+                            </tr>
+                            <tr>
+                                <th><label>Company</label></th>
+                                <td colspan="5"><input type="text" name="company" style="width:350px"></td>
+                            </tr>
+                            <tr>
+                                <th><label>Address</label></th>
+                                <td colspan="5"><input type="text" name="address_1" style="width:350px"></td>
+                            </tr>
+                            <tr>
+                                <th></th>
+                                <td colspan="5"><input type="text" name="address_2" style="width:350px"></td>
+                            </tr>
+                            <tr>
+                                <th>Suburb</th>
+                                <td><input type="text" name="suburb" style="width:100px"></td>
+                                <th>State</th>
+                                <td><select name="state">
+                                        <option></option>
+                                        <option>ACT</option>
+                                        <option>JBT</option>
+                                        <option>NSW</option>
+                                        <option>NT</option>
+                                        <option>QLD</option>
+                                        <option>SA</option>
+                                        <option>TAS</option>
+                                        <option>VIC</option>
+                                        <option>WA</option>
+                                    </select></td>
+                                <th>Post Code</th>
+                                <td><input type="text" name="post_code" style="width:50px"></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td style="width:30px">&nbsp;</td>
+                    <td>
+                        <table class="form">
+                            <tr>
+                                <th></th>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th><label>Phone</label></th>
+                                <td><input type="text" name="phone" style="width:350px"></td>
+                            </tr>
+                            <tr>
+                                <th><label>Fax</label></th>
+                                <td><input type="text" name="fax" style="width:350px"></td>
+                            </tr>
+                            <tr>
+                                <th><label>Contact</label></th>
+                                <td><input type="text" name="contact" style="width:350px"></td>
+                            </tr>
+                            <tr>
+                                <th><label>Email</label></th>
+                                <td><input type="text" name="email" style="width:350px"></td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <table class="form">
+                <tr>
+                    <th style="vertical-align:top"><label>Description</label></th>
+                    <td>
+                        <table style="border:1px solid #dedede; margin-bottom:5px">
+                            <tr>
+                                <td style="padding:10px"><strong>Channel 9</strong><br>
+                                    <strong>Posters 200gsm</strong><br>
+                                    Quantity 10, 1m wide x 1m high<br>
+                                    1x kind of artwork, 10 per kind</td>
+                                <td style="padding:10px">8 colour, single sided<br>
+                                    No laminate, single sided<br>
+                                    Trimmed size,<br>
+                                    Printed proof</td>
+                                <td style="padding:10px">Rolled on core<br>
+                                    Pickup<br>
+                                    24 hour Turnaround<br>
+                                    Standard colour matching</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <br>
+            <p style="float:right"><strong>Design</strong> | <a href="">Digital</a> | <a href="">Offset</a> | <a href="">Large format</a></p>
+            <p><input type="button" value="Add Product" class="link-add-product"> <input type="button" value="Add Product from Templates"> <input type="button" value="View Templates List"></p>
+            <table id="items">
+                <thead class="imain">
+                    <tr>
+                        <th class="notdraggable"><span>&nbsp;</span></th>
+                        <th class="notdraggable"><span>Regarding</span></th>
+                        <th class="notdraggable"><span>Product/Item</span></th>
+                        <th><span>Quantity</span></th>
+                        <th><span>Width</span></th>
+                        <th><span>Height</span></th>
+                        <th><span>Art kind</span></th>
+                        <th><span>Qty kind</span></th>
+                        <th><span>Join</span></th>
+                        <th><span>Pieces</span></th>
+                        <th><span>P/PER</span></th>
+                        <th><span>T/PER</span></th>
+                        <th><span>T/SQM</span></th>
+                        <th><span>P/SQM</span></th>
+                        <th><span>T/LM</span></th>
+                        <th><span>P/LM</span></th>
+                        <th class="notdraggable"><span>Hidden</span></th>
+                        <th class="notdraggable"><span>&nbsp;</span></th>
+                        <th class="notdraggable"><span>&nbsp;</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="#" class="collapse"><img src="images/collapse.gif" class="collapse-img"><img src="images/expand.gif" class="expand-img"></a></td>
+                        <td><input type="text" name="regarding" style="width:200px"></td>
+                        <td><input type="text" name="product_item" style="width:200px"></td>
+                        <td><input type="text" name="quantity" style="width:60px"></td>
+                        <td><input type="text" name="width" style="width:60px"></td>
+                        <td><input type="text" name="height" style="width:60px"></td>
+                        <td><input type="text" name="art_kind" style="width:60px"></td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">N/A</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">40</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                        <td><a href=""><img src="images/i-down.png"></a></td>
+                        <td><a href=""><img src="images/i-cross.png"></a></td>
+                    </tr>
+                    <tr style="display:none">
+                        <td colspan="19" style="padding:10px">
+                            <table class="tbl">
+                                <thead>
+                                    <tr>
+                                        <th>Category</th>
+                                        <th>Cost Matrix</th>
+                                        <th>Stock W</th>
+                                        <th>Stock H</th>
+                                        <th>C/Form</th>
+                                        <th>Time</th>
+                                        <th>U/Cost</th>
+                                        <th>T/Cost</th>
+                                        <th>Markup</th>
+                                        <th>TOT/Form</th>
+                                        <th>TOT/EX</th>
+                                        <th>TOT/INC</th>
+                                        <th>Profit</th>
+                                        <th>Hidden</th>
+                                        <th></th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><select name="item_cost_matrix">
+                                                <option>Please category</option>
+                                                <option>Banner</option>
+                                                <option>Printer</option>
+                                            </select></td>
+                                        <td><select name="item_cost_matrix">
+                                                <option>Please select</option>
+                                                <option>LF Setup</option>
+                                                <option>Printer Setup</option>
+                                                <option>450 Banner Media</option>
+                                            </select></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>SQM</td>
+                                        <td></td>
+                                        <td>5.00</td>
+                                        <td>50.00</td>
+                                        <td>100%</td>
+                                        <td>SQM</td>
+                                        <td>40.00</td>
+                                        <td>44.00</td>
+                                        <td>00.00</td>
+                                        <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                                        <td><a href=""><img src="images/i-down.png"></a></td>
+                                        <td><a href=""><img src="images/i-cross.png"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><select name="item_cost_matrix">
+                                                <option>Please category</option>
+                                                <option>Banner</option>
+                                                <option>Printer</option>
+                                            </select></td>
+                                        <td><select name="item_cost_matrix">
+                                                <option>Please select</option>
+                                                <option>LF Setup</option>
+                                                <option>Printer Setup</option>
+                                                <option>450 Banner Media</option>
+                                            </select></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>SQM</td>
+                                        <td></td>
+                                        <td>5.00</td>
+                                        <td>50.00</td>
+                                        <td>100%</td>
+                                        <td>SQM</td>
+                                        <td>40.00</td>
+                                        <td>44.00</td>
+                                        <td>00.00</td>
+                                        <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                                        <td><a href=""><img src="images/i-down.png"></a></td>
+                                        <td><a href=""><img src="images/i-cross.png"></a></td>
+                                    </tr>
+                                    <tr>
+                                        <td><select name="item_cost_matrix">
+                                                <option>Please category</option>
+                                                <option>Banner</option>
+                                                <option>Printer</option>
+                                            </select></td>
+                                        <td><select name="item_cost_matrix">
+                                                <option>Please select</option>
+                                                <option>LF Setup</option>
+                                                <option>Printer Setup</option>
+                                                <option>450 Banner Media</option>
+                                            </select></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td>SQM</td>
+                                        <td></td>
+                                        <td>5.00</td>
+                                        <td>50.00</td>
+                                        <td>100%</td>
+                                        <td>SQM</td>
+                                        <td>40.00</td>
+                                        <td>44.00</td>
+                                        <td>00.00</td>
+                                        <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                                        <td><a href=""><img src="images/i-down.png"></a></td>
+                                        <td><a href=""><img src="images/i-cross.png"></a></td>
+                                    </tr>
+                                    <tr style="background-color:#e4e4e4">
+                                        <td colspan="5" style="text-align:right">TOTALS</td>
+                                        <td style="text-align:center"><strong>1.00</strong><br>Time</td>
+                                        <td style="text-align:center"><strong>14.00</strong><br>U/Cost</td>
+                                        <td style="text-align:center"><strong>140.00</strong><br>T/Cost</td>
+                                        <td style="text-align:center"><strong>100%</strong><br>Markup</td>
+                                        <td style="text-align:center"><strong>28.00</strong><br>TOT/Unit</td>
+                                        <td style="text-align:center"><strong>280.00</strong><br>TOT/EX</td>
+                                        <td style="text-align:center"><strong>308.00</strong><br>TOT/INC</td>
+                                        <td style="text-align:center"><strong>140.00</strong><br>Profit</td>
+                                        <td colspan="3" style="text-align:center"><strong>50%</strong><br>GP</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p><input type="button" value="Add Item" class="link-add-item"> <input type="button" value="Save as Template"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="collapse"><img src="images/collapse.gif" class="collapse-img"><img src="images/expand.gif" class="expand-img"></a></td>
+                        <td><input type="text" name="regarding" style="width:200px"></td>
+                        <td><input type="text" name="product_item" style="width:200px"></td>
+                        <td><input type="text" name="quantity" style="width:60px"></td>
+                        <td><input type="text" name="width" style="width:60px"></td>
+                        <td><input type="text" name="height" style="width:60px"></td>
+                        <td><input type="text" name="art_kind" style="width:60px"></td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">N/A</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">40</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                        <td><a href=""><img src="images/i-down.png"></a></td>
+                        <td><a href=""><img src="images/i-cross.png"></a></td>
+                    </tr>
+                    <tr style="display:none">
+                        <td colspan="19" style="padding:10px">
+                            <table class="tbl">
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Cost Matrix</th>
+                                    <th>Stock W</th>
+                                    <th>Stock H</th>
+                                    <th>C/Form</th>
+                                    <th>Time</th>
+                                    <th>U/Cost</th>
+                                    <th>T/Cost</th>
+                                    <th>Markup</th>
+                                    <th>TOT/Form</th>
+                                    <th>TOT/EX</th>
+                                    <th>TOT/INC</th>
+                                    <th>Profit</th>
+                                    <th>Hidden</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please category</option>
+                                            <option>Banner</option>
+                                            <option>Printer</option>
+                                        </select></td>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please select</option>
+                                            <option>LF Setup</option>
+                                            <option>Printer Setup</option>
+                                            <option>450 Banner Media</option>
+                                        </select></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>SQM</td>
+                                    <td></td>
+                                    <td>5.00</td>
+                                    <td>50.00</td>
+                                    <td>100%</td>
+                                    <td>SQM</td>
+                                    <td>40.00</td>
+                                    <td>44.00</td>
+                                    <td>00.00</td>
+                                    <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                                    <td><a href=""><img src="images/i-down.png"></a></td>
+                                    <td><a href=""><img src="images/i-cross.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please category</option>
+                                            <option>Banner</option>
+                                            <option>Printer</option>
+                                        </select></td>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please select</option>
+                                            <option>LF Setup</option>
+                                            <option>Printer Setup</option>
+                                            <option>450 Banner Media</option>
+                                        </select></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>SQM</td>
+                                    <td></td>
+                                    <td>5.00</td>
+                                    <td>50.00</td>
+                                    <td>100%</td>
+                                    <td>SQM</td>
+                                    <td>40.00</td>
+                                    <td>44.00</td>
+                                    <td>00.00</td>
+                                    <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                                    <td><a href=""><img src="images/i-down.png"></a></td>
+                                    <td><a href=""><img src="images/i-cross.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please category</option>
+                                            <option>Banner</option>
+                                            <option>Printer</option>
+                                        </select></td>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please select</option>
+                                            <option>LF Setup</option>
+                                            <option>Printer Setup</option>
+                                            <option>450 Banner Media</option>
+                                        </select></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>SQM</td>
+                                    <td></td>
+                                    <td>5.00</td>
+                                    <td>50.00</td>
+                                    <td>100%</td>
+                                    <td>SQM</td>
+                                    <td>40.00</td>
+                                    <td>44.00</td>
+                                    <td>00.00</td>
+                                    <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                                    <td><a href=""><img src="images/i-down.png"></a></td>
+                                    <td><a href=""><img src="images/i-cross.png"></a></td>
+                                </tr>
+                                <tr style="background-color:#e4e4e4">
+                                    <td colspan="5" style="text-align:right">TOTALS</td>
+                                    <td style="text-align:center"><strong>1.00</strong><br>Time</td>
+                                    <td style="text-align:center"><strong>14.00</strong><br>U/Cost</td>
+                                    <td style="text-align:center"><strong>140.00</strong><br>T/Cost</td>
+                                    <td style="text-align:center"><strong>100%</strong><br>Markup</td>
+                                    <td style="text-align:center"><strong>28.00</strong><br>TOT/Unit</td>
+                                    <td style="text-align:center"><strong>280.00</strong><br>TOT/EX</td>
+                                    <td style="text-align:center"><strong>308.00</strong><br>TOT/INC</td>
+                                    <td style="text-align:center"><strong>140.00</strong><br>Profit</td>
+                                    <td colspan="3" style="text-align:center"><strong>50%</strong><br>GP</td>
+                                </tr>
+                            </table>
+                            <p><input type="button" value="Add Item" class="link-add-item"> <input type="button" value="Save as Template"></p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="#" class="collapse"><img src="images/collapse.gif" class="collapse-img"><img src="images/expand.gif" class="expand-img"></a></td>
+                        <td><input type="text" name="regarding" style="width:200px"></td>
+                        <td><input type="text" name="product_item" style="width:200px"></td>
+                        <td><input type="text" name="quantity" style="width:60px"></td>
+                        <td><input type="text" name="width" style="width:60px"></td>
+                        <td><input type="text" name="height" style="width:60px"></td>
+                        <td><input type="text" name="art_kind" style="width:60px"></td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">N/A</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">4</td>
+                        <td style="text-align:center">40</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center">10</td>
+                        <td style="text-align:center">1</td>
+                        <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                        <td><a href=""><img src="images/i-down.png"></a></td>
+                        <td><a href=""><img src="images/i-cross.png"></a></td>
+                    </tr>
+                    <tr style="display:none">
+                        <td colspan="19" style="padding:10px">
+                            <table class="tbl">
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Cost Matrix</th>
+                                    <th>Stock W</th>
+                                    <th>Stock H</th>
+                                    <th>C/Form</th>
+                                    <th>Time</th>
+                                    <th>U/Cost</th>
+                                    <th>T/Cost</th>
+                                    <th>Markup</th>
+                                    <th>TOT/Form</th>
+                                    <th>TOT/EX</th>
+                                    <th>TOT/INC</th>
+                                    <th>Profit</th>
+                                    <th>Hidden</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                                <tr>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please category</option>
+                                            <option>Banner</option>
+                                            <option>Printer</option>
+                                        </select></td>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please select</option>
+                                            <option>LF Setup</option>
+                                            <option>Printer Setup</option>
+                                            <option>450 Banner Media</option>
+                                        </select></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>SQM</td>
+                                    <td></td>
+                                    <td>5.00</td>
+                                    <td>50.00</td>
+                                    <td>100%</td>
+                                    <td>SQM</td>
+                                    <td>40.00</td>
+                                    <td>44.00</td>
+                                    <td>00.00</td>
+                                    <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                                    <td><a href=""><img src="images/i-down.png"></a></td>
+                                    <td><a href=""><img src="images/i-cross.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please category</option>
+                                            <option>Banner</option>
+                                            <option>Printer</option>
+                                        </select></td>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please select</option>
+                                            <option>LF Setup</option>
+                                            <option>Printer Setup</option>
+                                            <option>450 Banner Media</option>
+                                        </select></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>SQM</td>
+                                    <td></td>
+                                    <td>5.00</td>
+                                    <td>50.00</td>
+                                    <td>100%</td>
+                                    <td>SQM</td>
+                                    <td>40.00</td>
+                                    <td>44.00</td>
+                                    <td>00.00</td>
+                                    <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                                    <td><a href=""><img src="images/i-down.png"></a></td>
+                                    <td><a href=""><img src="images/i-cross.png"></a></td>
+                                </tr>
+                                <tr>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please category</option>
+                                            <option>Banner</option>
+                                            <option>Printer</option>
+                                        </select></td>
+                                    <td><select name="item_cost_matrix">
+                                            <option>Please select</option>
+                                            <option>LF Setup</option>
+                                            <option>Printer Setup</option>
+                                            <option>450 Banner Media</option>
+                                        </select></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>SQM</td>
+                                    <td></td>
+                                    <td>5.00</td>
+                                    <td>50.00</td>
+                                    <td>100%</td>
+                                    <td>SQM</td>
+                                    <td>40.00</td>
+                                    <td>44.00</td>
+                                    <td>00.00</td>
+                                    <td style="text-align:center"><input type="checkbox" name="item_hidden"></td>
+                                    <td><a href=""><img src="images/i-down.png"></a></td>
+                                    <td><a href=""><img src="images/i-cross.png"></a></td>
+                                </tr>
+                                <tr style="background-color:#e4e4e4">
+                                    <td colspan="5" style="text-align:right">TOTALS</td>
+                                    <td style="text-align:center"><strong>1.00</strong><br>Time</td>
+                                    <td style="text-align:center"><strong>14.00</strong><br>U/Cost</td>
+                                    <td style="text-align:center"><strong>140.00</strong><br>T/Cost</td>
+                                    <td style="text-align:center"><strong>100%</strong><br>Markup</td>
+                                    <td style="text-align:center"><strong>28.00</strong><br>TOT/Unit</td>
+                                    <td style="text-align:center"><strong>280.00</strong><br>TOT/EX</td>
+                                    <td style="text-align:center"><strong>308.00</strong><br>TOT/INC</td>
+                                    <td style="text-align:center"><strong>140.00</strong><br>Profit</td>
+                                    <td colspan="3" style="text-align:center"><strong>50%</strong><br>GP</td>
+                                </tr>
+                            </table>
+                            <p><input type="button" value="Add Item" class="link-add-item"> <input type="button" value="Save as Template"></p>
+                        </td>
+                    </tr>
+                    <tfoot>
+                        <tr style="background-color:#e4e4e4">
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td style="text-align:right">TOTALS</td>
+                            <td style="text-align:center"><strong>10</strong><br>Qty</td>
+                            <td style="text-align:center"><strong>1</strong><br>Width</td>
+                            <td style="text-align:center"><strong>1</strong><br>Height</td>
+                            <td style="text-align:center"><strong>1</strong><br>Art Kind</td>
+                            <td style="text-align:center"><strong>30</strong><br>Qty kind</td>
+                            <td style="text-align:center"><strong>N/A</strong><br>Join</td>
+                            <td style="text-align:center"><strong>30</strong><br>Pieces</td>
+                            <td style="text-align:center"><strong>12</strong><br>P/PER</td>
+                            <td style="text-align:center"><strong>120</strong><br>T/PER</td>
+                            <td style="text-align:center"><strong>30</strong><br>T/SQM</td>
+                            <td style="text-align:center"><strong>3</strong><br>P/SQM</td>
+                            <td style="text-align:center"><strong>30</strong><br>T/LM</td>
+                            <td style="text-align:center"><strong>3</strong><br>P/LM</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tfoot>
+                </tbody>
+            </table>
+            <p>Notes:</p>
+            <ol>
+                <li>When client is selected from combobox other details for selected client like address, contact, email etc. will be pre-filled.</li>
+                <li>For each product there will be a few cost items. Expend/collapse icons will be clickable and will expand or collapse cost items list.</li>
+                <li>If "Hidden" is checked this product or cost item won't be visible for client. Only for staff members.</li>
+                <li>With down/up arrows it should be possible to change order of products or cost items.</li>
+                <li>Item in cost item list will have combobox with list of items from cost matrix.</li>
+                <li>Save as Template should allow to save named templates from selected cost items to use for other products.</li>
+                <li>You will notice that on the right side of the top box there are tabs; Design, digital, offset &amp; large format. This is because each main product we sell has different calculations. for example click, sections, leafs ect ect.</li>
+            </ol>
+        </div>
+        <script type="text/javascript">
+            $(function() {
+                $('.link-add-product').click(function() {
+                    var mtbl = $('#items');
+                    var mtr = mtbl.find('>tbody>tr').eq(-3);
+                    var mtrHidden = mtbl.find('>tbody>tr').eq(-2);
+                    mtr.after(mtrHidden.clone(), mtr.clone());
+                });
+                $('.link-add-item').live("click", function(){
+                    var tbl = $(this).parent().parent().find('.tbl');
+                    var tr = tbl.find('tr').eq(-2);
+                    tr.after(tr.clone());
+                });
+                $('.collapse').live("click", function(){
+                    var costItems = $(this).parent().parent().next();
+                    if (costItems.is(':visible')) {
+                        costItems.hide();
+                        $(this).removeClass('active');
+                    } else {
+                        costItems.show();
+                        $(this).addClass('active');
+                    }
+                    return false;
+                });
+                
+                // Dragtable
+                $('#items').dragtable({
+                    items: 'thead.imain > tr > th:not( .notdraggable ):not( :has( .dragtable-drag-handle ) ), .dragtable-drag-handle',
+                    disabledLeftColumns: 3,
+                    disabledRightColumns: 3
+                });
+                
+                // Add change links
+                var changedColumnsTitles = $('#items thead.imain > tr > th:not(.notdraggable) span');
+                changedColumnsTitles.each(function(index, item) {
+                    $(item).append('<a href="#" class="changeLink">&nbsp;</a>');
+                });
+            });
+        </script>
+    </body>
 </html>

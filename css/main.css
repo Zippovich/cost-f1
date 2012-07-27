@@ -13,3 +13,20 @@ body { font-family: Arial; font-size: 10pt; }
 .collapse-img,
 .active .expand-img{display:none !important;}
 .active .collapse-img {display:block !important;}
+
+#items thead.imain > tr > th span {
+    position: relative
+}
+#items thead.imain > tr > th span a.changeLink {
+    position: absolute;
+    left: 0px;
+    top: -34px;
+    width: 32px;
+    height: 36px;
+    background: url('../images/i-settings.png') no-repeat;
+    text-decoration: none;
+    display: none
+}
+#items thead.imain > tr > th span:hover a.changeLink {
+    display: block
+}

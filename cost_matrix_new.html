@@ -1,170 +1,170 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
-<head>
-	<meta charset="UTF-8" />
-	<link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
-	<script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-</head>
-<body>
-	<img src="images/header.jpg">
-	<div id="content">
-		<h1>New Cost Matrix</h1>
-		<table class="form">
-			<tr>
-				<th><label>Category</label></th>
-				<td colspan="4"><select name="category">
-						<option>Please select</option>
-						<option>Media</option>
-						<option>Media LF</option>
-						<option>Meeting</option>
-					</select></td>
-				<td>&nbsp;</td>
-				<th><label>Description</label></th>
-				<td colspan="4"><input type="text" name="description" style="width:300px"></td>
-			</tr>
-			<tr>
-				<th><label>Tasks</label></th>
-				<td colspan="4"><textarea name="task_description" style="width:400px; height:100px"></textarea></td>
-				<td>&nbsp;</td>
-				<th><label>Notes</label></th>
-				<td colspan="4"><textarea name="notes" style="width:400px; height:100px"></textarea></td>
-			</tr>
-			<tr>
-				<th><label>Cost Formula</label></th>
-				<td><select name="cost_formula" id="formula">
-						<option value="">Please select</option>
-						<option value="Time based">Time based</option>
-						<option value="Fixed (one off) cost">Fixed (one off) cost</option>
-						<option value="Fixed cost x SQM">Fixed cost x SQM</option>
-						<option value="Quantity based">Quantity based</option>
-						<option value="SQM based">SQM based</option>
-						<option value="LM based">LM based</option>
-						<option value="Panel based">Panel based</option>
-						<option value="Perimeter based">Perimeter based</option>
-						<option value="Weight based">Weight based</option>
-						<option value="Width based">Width based</option>
-					</select></td>
-				<td>&nbsp;</td>
-				<th><label>Cost</label></th>
-				<td><input type="text" name="cost" style="width:50px"> $</td>
-				<td>&nbsp;</td>
-				<th><label>Charge Formula</label></th>
-				<td colspan="4"><select name="charge_formula" id="formula">
-						<option value="">Please select</option>
-						<option value="Time based">Time based</option>
-						<option value="Fixed (one off) cost">Fixed (one off) cost</option>
-						<option value="Fixed cost x SQM">Fixed cost x SQM</option>
-						<option value="Quantity based">Quantity based</option>
-						<option value="SQM based">SQM based</option>
-						<option value="LM based">LM based</option>
-						<option value="Panel based">Panel based</option>
-						<option value="Perimeter based">Perimeter based</option>
-						<option value="Weight based">Weight based</option>
-						<option value="Width based">Width based</option>
-					</select></td>
-			</tr>
-			<tr>
-				<th><label>width</label></th>
-				<td><input type="text" name="width" style="width:50px"> m</td>
-				<td>&nbsp;</td>
-				<th><label>length</label></th>
-				<td><input type="text" name="length" style="width:50px"> m</td>
-				<td>&nbsp;</td>
-				<th><label>Tier 1</label></th>
-				<td><input type="text" name="" value="" size="4"> % &nbsp; <input type="text" name="" value="" size="4"> $</td>
-				<td>&nbsp;</td>
-				<th><label>Tier 2</label></th>
-				<td><input type="text" name="" value="" size="4"> % &nbsp; <input type="text" name="" value="" size="4"> $</td>
-			</tr>
-			<tr>
-				<th><label>Stock QTY</label></th>
-				<td><input type="text" name="stock" style="width:50px"></td>
-				<td>&nbsp;</td>
-				<th></th>
-				<td><input type="checkbox" name="visible"> Show on tasks list</td>
-				<td>&nbsp;</td>
-				<th><label>Tier 3</label></th>
-				<td><input type="text" name="" value="" size="4"> % &nbsp; <input type="text" name="" value="" size="4"> $</td>
-				<td>&nbsp;</td>
-				<th><label>Tier 4</label></th>
-				<td><input type="text" name="" value="" size="4"> % &nbsp; <input type="text" name="" value="" size="4"> $</td>
-			</tr>
-		</table>
-		<table class="form">
-			<tr>
-				<th style="vertical-align:top; padding-top:13px"><label>Suppliers</label></th>
-				<td>
-					<div id="suppliers">
-						<table style="border:1px solid #dedede; margin-bottom:5px">
-							<tr>
-								<td>Name <input type="text" name="supplier_name" style="width:200px"> &nbsp; Address <input type="text" name="supplier_address" style="width:440px"></td>
-							</tr>
-							<tr>
-								<td>Contact <input type="text" name="supplier_contact" style="width:200px"> &nbsp; Email <input type="text" name="supplier_email" style="width:270px"> &nbsp; Mob <input type="text" name="supplier_mobile"></td>
-							</tr>
-							<tr>
-								<td>Ph <input type="text" name="supplier_ph"> &nbsp; Fax <input type="text" name="supplier_fax"> &nbsp; Pack Time <input type="text" name="supplier_pack_time" style="width:60px"> &nbsp; Unit weight <input type="text" name="supplier_unit_weight" style="width:40px"> &nbsp; Pieces per Packs <input type="text" name="supplier_pieces_per_pack" style="width:40px"></td>
-							</tr>
-							<tr>
-								<td>Qty Ordered <input type="text" name="supplier_qty_ordered" style="width:100px"> &nbsp; Courier <input type="text" name="supplier_courier"> &nbsp; Courier Time <input type="text" name="supplier_courier_time" style="width:60px"> &nbsp; Payment terms <input type="text" name="supplier_payment_terms"></td>
-							</tr>
-						</table>
-					</div>
-					<p><a href="#" id="add_supplier_link">Add another supplier</a></p>
-				</td>
-			</tr>
-			<tr>
-				<td></td>
-				<td>
-					<input type="button" value="Save" onclick="window.location='cost_matrix.html'">
-					<input type="button" value="Cancel" onclick="window.location='cost_matrix.html'">
-				</td>
-			</tr>
-		</table>
-		<p>Notes:</p>
-		<ol>
-			<li>There can be many tiers set in the system. Each client will have tier selected.</li>
-			<li>Each tier can have or percent or fixed price is set.</li>
-			<li>Selected formula determines how to calculate cost which can depends on LM, SQL, quantity, hours etc.</li>
-		</ol>
-	</div>
-	<script type="text/javascript">
-		$(function() {
-			$('#add_supplier_link').click(function() {
-				$('#suppliers table:first').clone().appendTo('#suppliers');
-				return false;
-			});
-			$('#add_range_link').click(function() {
-				$('#guides tr:last').clone().appendTo('#guides');
-				return false;
-			});
-			/*$('#formula').change(function() {
-				$('#fixed-price-row').hide();
-				$('#guides-row').hide();
-				$('#hourly-price-row').hide();
-				if ($('#formula').val() != '') {
-					if ($('#formula').val() == 'Fixed (one off) cost') {
-						$('#fixed-price-row').show();
-					} else if ($('#formula').val() == 'Time based') {
-						$('#hourly-price-row').show();
-					} else {
-						$('#guides-row').show();
-						if ($('#formula').val() == 'Quantity based') {
-							$('.measure').text('qty');
-						}
-						if ($('#formula').val() == 'SQM based' || $('#formula').val() == 'Fixed cost x SQM') {
-							$('.measure').text('sqm');
-						}
-						if ($('#formula').val() == 'LM based' || $('#formula').val() == 'Panel based' || $('#formula').val() == 'Perimeter based' || $('#formula').val() == 'Width based') {
-							$('.measure').text('m');
-						}
-						if ($('#formula').val() == 'Weight based') {
-							$('.measure').text('kg');
-						}
-					}
-				}
-			});*/
-		});
-	</script>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="stylesheet" type="text/css" media="all" href="css/main.css" />
+        <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
+    </head>
+    <body>
+        <img src="images/header.jpg">
+        <div id="content">
+            <h1>New Cost Matrix</h1>
+            <table class="form">
+                <tr>
+                    <th><label>Category</label></th>
+                    <td colspan="4"><select name="category">
+                            <option>Please select</option>
+                            <option>Media</option>
+                            <option>Media LF</option>
+                            <option>Meeting</option>
+                        </select></td>
+                    <td>&nbsp;</td>
+                    <th><label>Description</label></th>
+                    <td colspan="4"><input type="text" name="description" style="width:300px"></td>
+                </tr>
+                <tr>
+                    <th><label>Tasks</label></th>
+                    <td colspan="4"><textarea name="task_description" style="width:400px; height:100px"></textarea></td>
+                    <td>&nbsp;</td>
+                    <th><label>Notes</label></th>
+                    <td colspan="4"><textarea name="notes" style="width:400px; height:100px"></textarea></td>
+                </tr>
+                <tr>
+                    <th><label>Cost Formula</label></th>
+                    <td><select name="cost_formula" id="formula">
+                            <option value="">Please select</option>
+                            <option value="Time based">Time based</option>
+                            <option value="Fixed (one off) cost">Fixed (one off) cost</option>
+                            <option value="Fixed cost x SQM">Fixed cost x SQM</option>
+                            <option value="Quantity based">Quantity based</option>
+                            <option value="SQM based">SQM based</option>
+                            <option value="LM based">LM based</option>
+                            <option value="Panel based">Panel based</option>
+                            <option value="Perimeter based">Perimeter based</option>
+                            <option value="Weight based">Weight based</option>
+                            <option value="Width based">Width based</option>
+                        </select></td>
+                    <td>&nbsp;</td>
+                    <th><label>Cost</label></th>
+                    <td><input type="text" name="cost" style="width:50px"> $</td>
+                    <td>&nbsp;</td>
+                    <th><label>Charge Formula</label></th>
+                    <td colspan="4"><select name="charge_formula" id="formula">
+                            <option value="">Please select</option>
+                            <option value="Time based">Time based</option>
+                            <option value="Fixed (one off) cost">Fixed (one off) cost</option>
+                            <option value="Fixed cost x SQM">Fixed cost x SQM</option>
+                            <option value="Quantity based">Quantity based</option>
+                            <option value="SQM based">SQM based</option>
+                            <option value="LM based">LM based</option>
+                            <option value="Panel based">Panel based</option>
+                            <option value="Perimeter based">Perimeter based</option>
+                            <option value="Weight based">Weight based</option>
+                            <option value="Width based">Width based</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <th><label>width</label></th>
+                    <td><input type="text" name="width" style="width:50px"> m</td>
+                    <td>&nbsp;</td>
+                    <th><label>length</label></th>
+                    <td><input type="text" name="length" style="width:50px"> m</td>
+                    <td>&nbsp;</td>
+                    <th><label>Tier 1</label></th>
+                    <td><input type="text" name="" value="" size="4"> % &nbsp; <input type="text" name="" value="" size="4"> $</td>
+                    <td>&nbsp;</td>
+                    <th><label>Tier 2</label></th>
+                    <td><input type="text" name="" value="" size="4"> % &nbsp; <input type="text" name="" value="" size="4"> $</td>
+                </tr>
+                <tr>
+                    <th><label>Stock QTY</label></th>
+                    <td><input type="text" name="stock" style="width:50px"></td>
+                    <td>&nbsp;</td>
+                    <th></th>
+                    <td><input type="checkbox" name="visible"> Show on tasks list</td>
+                    <td>&nbsp;</td>
+                    <th><label>Tier 3</label></th>
+                    <td><input type="text" name="" value="" size="4"> % &nbsp; <input type="text" name="" value="" size="4"> $</td>
+                    <td>&nbsp;</td>
+                    <th><label>Tier 4</label></th>
+                    <td><input type="text" name="" value="" size="4"> % &nbsp; <input type="text" name="" value="" size="4"> $</td>
+                </tr>
+            </table>
+            <table class="form">
+                <tr>
+                    <th style="vertical-align:top; padding-top:13px"><label>Suppliers</label></th>
+                    <td>
+                        <div id="suppliers">
+                            <table style="border:1px solid #dedede; margin-bottom:5px">
+                                <tr>
+                                    <td>Name <input type="text" name="supplier_name" style="width:200px"> &nbsp; Address <input type="text" name="supplier_address" style="width:440px"></td>
+                                </tr>
+                                <tr>
+                                    <td>Contact <input type="text" name="supplier_contact" style="width:200px"> &nbsp; Email <input type="text" name="supplier_email" style="width:270px"> &nbsp; Mob <input type="text" name="supplier_mobile"></td>
+                                </tr>
+                                <tr>
+                                    <td>Ph <input type="text" name="supplier_ph"> &nbsp; Fax <input type="text" name="supplier_fax"> &nbsp; Pack Time <input type="text" name="supplier_pack_time" style="width:60px"> &nbsp; Unit weight <input type="text" name="supplier_unit_weight" style="width:40px"> &nbsp; Pieces per Packs <input type="text" name="supplier_pieces_per_pack" style="width:40px"></td>
+                                </tr>
+                                <tr>
+                                    <td>Qty Ordered <input type="text" name="supplier_qty_ordered" style="width:100px"> &nbsp; Courier <input type="text" name="supplier_courier"> &nbsp; Courier Time <input type="text" name="supplier_courier_time" style="width:60px"> &nbsp; Payment terms <input type="text" name="supplier_payment_terms"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <p><a href="#" id="add_supplier_link">Add another supplier</a></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="button" value="Save" onclick="window.location='cost_matrix.html'">
+                        <input type="button" value="Cancel" onclick="window.location='cost_matrix.html'">
+                    </td>
+                </tr>
+            </table>
+            <p>Notes:</p>
+            <ol>
+                <li>There can be many tiers set in the system. Each client will have tier selected.</li>
+                <li>Each tier can have or percent or fixed price is set.</li>
+                <li>Selected formula determines how to calculate cost which can depends on LM, SQL, quantity, hours etc.</li>
+            </ol>
+        </div>
+        <script type="text/javascript">
+            $(function() {
+                $('#add_supplier_link').click(function() {
+                    $('#suppliers table:first').clone().appendTo('#suppliers');
+                    return false;
+                });
+                $('#add_range_link').click(function() {
+                    $('#guides tr:last').clone().appendTo('#guides');
+                    return false;
+                });
+                /*$('#formula').change(function() {
+                                $('#fixed-price-row').hide();
+                                $('#guides-row').hide();
+                                $('#hourly-price-row').hide();
+                                if ($('#formula').val() != '') {
+                                        if ($('#formula').val() == 'Fixed (one off) cost') {
+                                                $('#fixed-price-row').show();
+                                        } else if ($('#formula').val() == 'Time based') {
+                                                $('#hourly-price-row').show();
+                                        } else {
+                                                $('#guides-row').show();
+                                                if ($('#formula').val() == 'Quantity based') {
+                                                        $('.measure').text('qty');
+                                                }
+                                                if ($('#formula').val() == 'SQM based' || $('#formula').val() == 'Fixed cost x SQM') {
+                                                        $('.measure').text('sqm');
+                                                }
+                                                if ($('#formula').val() == 'LM based' || $('#formula').val() == 'Panel based' || $('#formula').val() == 'Perimeter based' || $('#formula').val() == 'Width based') {
+                                                        $('.measure').text('m');
+                                                }
+                                                if ($('#formula').val() == 'Weight based') {
+                                                        $('.measure').text('kg');
+                                                }
+                                        }
+                                }
+                        });*/
+            });
+        </script>
+    </body>
 </html>
